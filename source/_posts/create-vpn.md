@@ -7,7 +7,7 @@ tags: 翻墙
 
 自己作为一个从事IT相关工作，还是有必要进行科学上网，最常用的就是可以任意的google，了解最新及全面的技术知识，体验国外做得好的一些APP。下面针对windows、mac、ios、Android不同终端使用上做简单整理。
 
-###一、Windows和Mac上配置ShadowsocksR的方法
+一、Windows和Mac上配置ShadowsocksR的方法
 
 1.下载地址：链接: https://pan.baidu.com/s/1o7NOrUU 密码: yvxq
 2.下载后直接解压后打开，相关配置都配置好确定
@@ -15,7 +15,7 @@ tags: 翻墙
 
 MAC电脑上配置方法与windows类似，就不过多描述了。Mac下载地址：链接: https://pan.baidu.com/s/1pKBBcqn 密码: tn3c
 
-###二、iOS手机上安装Shadowrocket软件
+二、iOS手机上安装Shadowrocket软件
 
 （国内用户在App Store下载不到，按照如下两种方法进行安装）
 方法一：
@@ -31,7 +31,7 @@ MAC电脑上配置方法与windows类似，就不过多描述了。Mac下载地�
 
 5．在手机上打开Shadowrocket客户端后添加节点进行配置即可
 ![](http://www.87testing.com/assets/blogimg/vpn003.png)
-###三、Android手机上安装Shadowrocket客户端
+三、Android手机上安装Shadowrocket客户端
 
 1.下载Android客户端：链接: https://pan.baidu.com/s/1mi1hZvU 密码: 2nkv
 2.下载安装完成打开SSR，添加配置启动即可
