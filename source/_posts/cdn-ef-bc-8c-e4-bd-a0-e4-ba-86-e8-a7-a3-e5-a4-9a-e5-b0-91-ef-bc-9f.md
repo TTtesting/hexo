@@ -1,0 +1,57 @@
+---
+title: CDN，你了解多少？
+tags:
+  - CDN
+id: 167
+categories:
+  - 未分类
+date: 2017-06-11 17:03:07
+---
+
+大家对CDN并不陌生，工作中或多或少都有所接触，最近也有人问到，在此对CDN相关概念和流程做下总结，希望还能对其他朋友也有所帮助。
+
+&nbsp;
+
+**一、什么是CDN**
+
+&nbsp;
+
+维基百科上是这样定义的：
+> CDN：内容分发网络（Content delivery network或Content distribution network）是指一种通过互联网互相连接的电脑网络系统，利用最靠近每位用户的服务器，更快、更可靠地将音乐、图片、视频、应用程序及其他文件发送给用户，来提供高性能、可扩展性及低成本的网络内容传递给用户。
+&nbsp;
+
+对于还未了解的朋友，可能还不清楚CDN到底是啥，到底是做什么的？下面举个例子说明下：
+
+以前还没有火车票代售点，12306.cn也只不过是最近几年才有。那时候火车票还智能在火车站的售票大厅购买，好多小县城不通火车，火车票要到市里去买，从小县城到市里去买火车票来回要花不少时间。后来小县城有了火车票代售点，可以直接在代售点购买车票，方便了很多，全市人民再也不用苦逼的排队在一个点买票了，可以分散到不同的火车票代售点。那么CDN就可以理解为分布在每个县城的火车票代售点，用户在浏览网站时，CDN会选择一个离用户最近的CDN边缘节点来响应用户的请求，这样上海的移动用户的请求就不用千里迢迢跑到北京电信机房的服务器上了（假设源站部署在北京电信机房）。这样，CDN节点解决了跨运营商和跨地域访问的问题，访问时间大大降低，同时，大部分请求在CDN边缘节点完成，CDN起到了分流作用，减轻了源站的负载。
+
+&nbsp;
+
+**二、CDN工作流程**
+
+&nbsp;
+
+用户访问未使用CDN缓存网站的过程为：
+
+![](http://www.87testing.com/assets/blogimg/cdn1.png)![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJDQzA1MTVGNkE2MjExRTRBRjEzODVCM0Q0NEVFMjFBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJDQzA1MTYwNkE2MjExRTRBRjEzODVCM0Q0NEVFMjFBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkNDMDUxNUQ2QTYyMTFFNEFGMTM4NUIzRDQ0RUUyMUEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkNDMDUxNUU2QTYyMTFFNEFGMTM4NUIzRDQ0RUUyMUEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6p+a6fAAAAD0lEQVR42mJ89/Y1QIABAAWXAsgVS/hWAAAAAElFTkSuQmCC)
+
+用户在浏览网站的时候，浏览器能够在本地保存网站中的图片或者资源文件，这样用户再次访问该网站的时候，浏览器就不用再下载全部的资源文件，减少了下载量意味着提高了页面加载的速度。
+
+&nbsp;
+
+CDN网络是在用户和服务器之间增加Cache层，主要是通过接管DNS实现,将用户的请求引导到Cache上获得源服务器的数据
+
+下面让我们看看访问使用CDN缓存后的网站的过程：
+
+&nbsp;
+
+![](http://www.87testing.com/assets/blogimg/cdn2.png)
+
+一般来说CDN节点会包括nginx和cache两部分，nginx作负载均衡，cache作为缓存，用户请求到CDN节点后，如果cache中没有缓存用户的内容（包括真的没有或者是过期时间到了），这时候CDN节点会去源站去请求用户所需的资源，拿到数据后CDN节点会做两件事情，把数据返回给用户，并且把数据缓存在cache，这样同样的请求就可以从cache取，不需要回源了。另外你要注意，当前的CDN不会让源站来推送数据的，都是第一次去源站取，采用拉数据的方式。
+
+&nbsp;
+
+对于测试人员，需要确认下网站所加载的图片等资源是否都走了CDN，看下是否为CDN域名地址，网站提速不可缺少的一部分。
+
+&nbsp;
+
+当前CDN都在拼价格，不想以前被chinaCache垄断，BAT都有自己的CDN节点，对第三方CDN的依赖也在下降。就写到这吧，是否对CDN有所了解了，留言告诉我吧！
