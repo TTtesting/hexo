@@ -1,6 +1,6 @@
 ---
 title: linux下python2升级python3，python2和python3并存
-date: 2017-01-24 18:35:13
+date: 2018-01-24 18:35:13
 tags: python
 ---
 wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz
