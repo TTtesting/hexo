@@ -1,6 +1,6 @@
 ---
 title: linux下配置java环境
-date: 2018-01-30 08:00:00
+date: 2018-01-30 08:01:00
 tags: java
 ---
 1、首先下载对应CentOS版本的jdk，我下载的是：jdk-8u161-linux-x64.tar.gz
