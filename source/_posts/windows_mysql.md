@@ -9,6 +9,7 @@ tags: mysql
 2、下载完成，解压到合适的目录中，比如我放在D盘mysql目录下D:\mysql
 
 3、在D:\mysql\mysql-5.7.21-winx64目录下新建一个空的data文件夹，再在D:\mysql\mysql-5.7.21-winx64目录下创建一个文件mysql.ini,mysql.ini文件内的内容为：
+```
 [mysql]
 # 设置mysql客户端默认字符集
 default-character-set=utf8 
@@ -26,6 +27,7 @@ character-set-server=utf8
 # 创建新表时将使用的默认存储引擎
 default-storage-engine=INNODB
 
+```
 4、cmd命令进入到D:/mysql/mysql-5.7.21-winx64/bin目录下，执行：mysqld --initialize-insecure
 
 5、再输入mysqld -install，会显示Service successfully installed.
@@ -40,6 +42,7 @@ MySQL 服务已经启动成功。
 8、再输入：mysql -u root -p，此时会提示Enter password：，输入密码即可进入mysql
 
 9、查看mysql里面的数据库有哪些：show databases; 
+```
 mysql> show databases;
 +--------------------+
 | Database           |
@@ -49,3 +52,5 @@ mysql> show databases;
 | performance_schema |
 | sys                |
 +--------------------+
+
+```

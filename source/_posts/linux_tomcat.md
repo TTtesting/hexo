@@ -12,12 +12,12 @@ https://tomcat.apache.org/download-90.cgi
 
 4、vi /etc/profile.d/tomcat.sh
 新增：
-'''
+```
 CATALINA_BASE=/usr/local/tomcat
 PATH=$CATALINA_BASE/bin:$PATH
 export PATH CATALINA_BASE
 
-'''
+```
 :wq!保存并退出。
 
 执行：
